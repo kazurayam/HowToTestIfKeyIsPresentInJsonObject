@@ -6,7 +6,9 @@ In the Katalon user forum, there was an old post in May 2019
 
 - https://forum.katalon.com/t/how-to-verify-a-json-node-is-present/26244
 
-which has not been answered yet until Aug 2024. The original poster had a Web Service Response as follows:
+which has not been answered yet until Aug 2024.
+
+The original poster had a Web Service Response as follows:
 
 ```
 {
@@ -27,11 +29,11 @@ The originator asked
 
 >Is there any method to check if a specific node is present using katalon inbuild method, something like `WS.verifyNodePresent(response, 'body.user.firstName', true)`
 
-Katalon Studio does not support `WS.verifyNodePresent` keyword. The originator got no answer from the Katalon forum. So, is there any other way?
+Katalon Studio does not support `WS.verifyNodePresent` keyword. The originator has got no answer from the Katalon forum. So, is there any other way?
 
 ## Solution proposed
 
-Recenty I learned [Jayway JsonPath](https://github.com/json-path/JsonPath). I found that Jayway JsonPath can solve the problem nicely. So I created a sample code and show it here.
+Recenty I learned [Jayway JsonPath](https://github.com/json-path/JsonPath). I found that Jayway JsonPath can solve the problem nicely. So I created a sample code and will show it here.
 
 ## Description
 
@@ -98,7 +100,7 @@ Please note that here I utilized the `keys()` function of JsonPath, which return
 $.body.user.keys() [surname, firstName, dateOfBirth, titleCode, middleName, genderCode]
 ```
 
-The `keys()` function is a goodness of Jayway JsonPath. This solves a lot of issues regarding verifying JSON.
+The `keys()` function is a goodness of Jayway JsonPath. This helps solving a lot of issues regarding verifying JSON.
 
 ### How to import the required dependencies
 
