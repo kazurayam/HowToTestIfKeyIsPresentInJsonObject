@@ -1,0 +1,12 @@
+{
+  "body": {
+    "user": {
+      "surname": "Morris",
+      "firstName": "James",
+      "dateOfBirth": "1983-04-19",
+      "titleCode": "Mr",
+      "middleName": "P",
+      "genderCode": "male"
+    }
+  }
+}
