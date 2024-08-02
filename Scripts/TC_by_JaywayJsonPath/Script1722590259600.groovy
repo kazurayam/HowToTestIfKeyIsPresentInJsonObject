@@ -25,6 +25,7 @@ if (result != 6) {
 }
 
 def keySet = (Set)dc.read("\$.body.user.keys()")
+println "\$.body.user.keys(): ${keySet}"
 if (!keySet.contains("firstName")) {
 	KeywordUtil.markFailed("\$.body.user.keys() ${keySet} does not contain firstName")
 }
