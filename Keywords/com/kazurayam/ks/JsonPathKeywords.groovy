@@ -6,11 +6,11 @@ import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 
 class JsonPathKeywords {
-	
-	static def verifyValueEquals(DocumentContext dc, String jsonPath, String expected,
+
+	static def verifyValueEquals(DocumentContext dc, String jsonPath, Object expected,
 			FailureHandling flowControl = RunConfiguration.getDefaultFailureHandling()) {
-		def result = (String)dc.read(jsonPath);
-		if (result != expected) {
+		def result = dc.read(jsonPath).toString();
+		if (result != expected.toString()) {
 			log("${jsonPath} is ${result}, not ${expected}", flowControl)
 		}
 	}
