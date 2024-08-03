@@ -15,7 +15,7 @@ class JsonPathKeywords {
 		}
 	}
 
-	static def verifyObjectLength(DocumentContext dc, String jsonPathForObject, int expected,
+	static def verifyObjectSize(DocumentContext dc, String jsonPathForObject, int expected,
 			FailureHandling flowControl = RunConfiguration.getDefaultFailureHandling()) {
 		def result = (Integer)dc.read(jsonPathForObject + ".length()");
 		if (result != expected) {

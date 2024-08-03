@@ -16,7 +16,7 @@ DocumentContext dc = JsonPath.parse(dataText)
 
 JP.verifyValueEquals(dc, "\$.body.user.firstName", "James");
 
-JP.verifyObjectLength(dc, "\$.body.user", 6);
+JP.verifyObjectSize(dc, "\$.body.user", 6);
 
 JP.verifyKeyPresent(dc, "\$.body.user", "firstName")
 
