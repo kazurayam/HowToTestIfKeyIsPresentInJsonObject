@@ -1,4 +1,4 @@
-# [Katalon Studio] How to verify if a key is present in a JSON object in a Web Service Response
+# [Katalon Studio] How to test if a key is present in a JSON object in a Web Service Response
 
 ## Problem to solve
 
@@ -29,7 +29,9 @@ The originator asked
 
 >Is there any method to check if a specific node is present using katalon inbuild method, something like `WS.verifyNodePresent(response, 'body.user.firstName', true)`
 
-Katalon Studio does not support `WS.verifyNodePresent` keyword. The originator has got no answer from the Katalon forum. So, is there any other way?
+Katalon Studio does not support `WS.verifyNodePresent` keyword.
+
+The originator has got no answer from the Katalon forum. So, let me ask the same question again. Is there any way to test if a key is present in a JSON object?
 
 ## Solution proposed
 
@@ -100,7 +102,7 @@ Please note that here I utilized the `keys()` function of JsonPath, which return
 $.body.user.keys() [surname, firstName, dateOfBirth, titleCode, middleName, genderCode]
 ```
 
-The `keys()` function is a goodness of Jayway JsonPath. This helps solving a lot of issues regarding verifying JSON.
+The `keys()` function helps solving a lot of issues regading verifying JSON. The `keys()` function is q unique feature of Jayway JsonPath in Java. Other implementations of [JsonPath](https://goessner.net/articles/JsonPath/) in JavaScript and Pathon do not have it.
 
 ### How to import the required dependencies
 
@@ -111,4 +113,4 @@ See the [build.gradle](https://github.com/kazurayam/HowToVerifyJsonIfObjectKeyIs
 
 ## Conclusion
 
-Katalon Studio provides a set of WS keywords that deal with JSON response as Web Service, for example [WS.verifyELementPropertyValue](https://docs.katalon.com/katalon-studio/keywords/keyword-description-in-katalon-studio/web-service-keywords/ws-verify-element-property-value). In my humble opinion, the coverage is very limitted. And I do not think the product's feature for JSON verification will be expanded in future. However, we have Jayway JsonPath. This will support us very much. I believe it is worth spending your time to learn Jayway JsonPath.
+Katalon Studio provides a set of WS keywords that deal with JSON response as Web Service, for example [WS.verifyElementPropertyValue](https://docs.katalon.com/katalon-studio/keywords/keyword-description-in-katalon-studio/web-service-keywords/ws-verify-element-property-value). In my humble opinion, the coverage is very limitted. I do not expect the product's feature for JSON verification will be expanded in future. However, Jayway JsonPath is available to us. I believe it is well worth specing your time to learn.
